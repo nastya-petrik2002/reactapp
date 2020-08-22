@@ -1,5 +1,6 @@
 import React from 'react';
 //import './UserListStyle.css';
+
 const ListItem = (props) => {
   const {
     isSelected,
@@ -7,7 +8,7 @@ const ListItem = (props) => {
     user: { id, fName, lName },
   } = props;
   const styles = {
-    bgColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: isSelected ? 'rgba(0, 0, 0, 0.5)' : 'initial',
   };
   return (
     //<li className="styleListItem">

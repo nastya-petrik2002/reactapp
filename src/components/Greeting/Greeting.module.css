@@ -1,0 +1,8 @@
+.container {
+  font-size: 30px;
+  color: red;
+  background-color: lightyellow;
+  border: 1px solid;
+  border-color: maroon;
+  display: inline;
+}
