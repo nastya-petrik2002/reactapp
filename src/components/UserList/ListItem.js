@@ -7,7 +7,7 @@ const ListItem = (props) => {
     user: { id, fName, lName },
   } = props;
   const styles = {
-    bgColor: 'rgb(0, 0, 255)',
+    bgColor: 'rgba(0, 0, 0, 0.5)',
   };
   return (
     //<li className="styleListItem">
@@ -17,8 +17,8 @@ const ListItem = (props) => {
         UserID: "{id}"; UserFullName:"{fName} {lName}";
       </span>
       <button onClick={onSelect}>Select</button>
-      <input type="checkbox" />
     </li>
+    //<input type="checkbox" />
   );
 };
 export default ListItem;
