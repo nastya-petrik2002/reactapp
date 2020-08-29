@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Day.moodle.css';
+import { format } from 'date-fns';
 
-function Day(props) {
-  const { dayName, number } = props;
+const Day = ({ currentDate }) => {
   return (
     <div>
-      <div>{dayName}</div>
+      <div className={styles}>{dayName}</div>
       <div>{number}</div>
     </div>
   );
-}
+};
 export default Day;
