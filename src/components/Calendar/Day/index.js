@@ -5,10 +5,13 @@ import { format } from 'date-fns';
 
 const Day = ({ currentDate }) => {
   return (
-    <div>
-      <div className={styles}>{dayName}</div>
-      <div>{number}</div>
+    <div className={styles.wrapper}>
+      <div className={styles.name}>{format(currentDate, 'iiii')}</div>
+      <div className={styles.number}>{format(currentDate, 'd')}</div>
     </div>
   );
+};
+Day.PropTypes = {
+  currentDate: PropTypes.instanceOf(Date).isRequired,
 };
 export default Day;
