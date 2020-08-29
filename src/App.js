@@ -5,12 +5,13 @@ import SelectedUsers from './components/SelectedUsers/index';
 import Timer from './components/Timer/index';
 import Greeting from './components/Greeting';
 import FormLogin from './components/FormLogin';
+import Calendar from './components/Calendar';
 
 const dbData = [];
 const App = () => {
   return (
     <>
-      <FormLogin />
+      <Calendar />
     </>
   );
 };

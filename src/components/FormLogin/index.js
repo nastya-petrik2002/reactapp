@@ -7,6 +7,7 @@ class FormLogin extends Component {
     this.state = {
       userEmail: '',
       userPassword: '',
+      isPasswordValid: null,
     };
   }
   handleEmailChange = (event) => {
@@ -14,7 +15,7 @@ class FormLogin extends Component {
       userEmail: event.target.value,
     });
   };
-  handlePasswoedChange = (event) => {
+  handlePasswordChange = (event) => {
     this.setState({
       userPassword: event.target.value,
     });
@@ -26,7 +27,10 @@ class FormLogin extends Component {
     e.preventDefault();
   };
   render() {
-    const { userEmail, userPassword } = this.state;
+    const { userEmail, userPassword, isPasswordValid } = this.state;
+    const passStyleClass = `${styles.input} ${
+      isPasswordValid && styles.inputValid
+    }`;
     return (
       <form onSubmit={this.handleSubmit} className={styles.container}>
         <input
@@ -38,11 +42,11 @@ class FormLogin extends Component {
           placeholder="Enter email"
         />
         <input
-          className={styles.inputstyle}
+          className={passStyleClass}
           type="password"
           name="userPassword"
           value={userPassword}
-          onChange={this.handlePasswoedChange}
+          onChange={this.handlePasswordChange}
           placeholder="Enter password"
         />
         <button type="submit"> LOGIN </button>
