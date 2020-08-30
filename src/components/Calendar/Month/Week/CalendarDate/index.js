@@ -6,9 +6,9 @@ import propTypes from 'prop-types';
 
 const CalendarDate = ({ dayDate, date, currentDate }) => {
   const isCurrent =
-    isSameDay(dayDate, dayDate) && isSameMonth(dayDate, dayDate);
+    isSameDay(dayDate, currentDate) && isSameMonth(dayDate, dayDate);
   const className = classNames(styles.box, {
-    [styles.currentDate]: isCurrent,
+    [styles.currentDay]: isCurrent,
     [styles.otherMonth]: !isSameMonth(dayDate, date),
   });
   return <li className={className}>{format(dayDate, 'd')}</li>;

@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styles from './Day.moodle.scss';
+import styles from './Day.module.scss';
 import { format } from 'date-fns';
 
 const Day = ({ currentDate }) => {
