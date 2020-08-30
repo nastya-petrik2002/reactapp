@@ -1,30 +1,21 @@
 import React, { Component } from 'react';
 import Day from './Day';
 import Month from './Month';
-import { format } from 'date-fns';
+import styles from './Calendar.module.scss';
+import propTypes from 'prop-types';
 
-class Calendar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentDate: new Date(),
-    };
-  }
-  render() {
-    const { currentDate } = this.state;
-    const dayName = format(currentDate, 'iiii');
-    const currentDay = format(currentDate, 'd');
-    const month = {
-      name: format(currentDate, 'LLLL'),
-      number: format(currentDate, 'L') - 1,
-    };
-    const year = format(currentDate, 'yyyy');
-    return (
-      <article>
-        <Day dayName={dayName} number={currentDay} />
-        <Month month={month} year={year} currentDate={currentDate} />
-      </article>
-    );
-  }
-}
+const Calendar = ({ currentDate }) => {
+  return (
+    <article className={styles.container}>
+      <Day currentDate={currentDate} />
+      <Month date={currentDate} currentDate={currentDate} />
+    </article>
+  );
+};
+Calendar.propTypes = {
+  currentDate: propTypes.instanceOf(Date),
+};
+Calendar.defaultProps = {
+  currentDate: new Date(),
+};
 export default Calendar;

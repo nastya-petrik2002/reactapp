@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Day.moodle.css';
+import propTypes from 'prop-types';
+import styles from './Day.moodle.scss';
 import { format } from 'date-fns';
 
 const Day = ({ currentDate }) => {
@@ -11,7 +11,7 @@ const Day = ({ currentDate }) => {
     </div>
   );
 };
-Day.PropTypes = {
-  currentDate: PropTypes.instanceOf(Date).isRequired,
+Day.propTypes = {
+  currentDate: propTypes.instanceOf(Date).isRequired,
 };
 export default Day;

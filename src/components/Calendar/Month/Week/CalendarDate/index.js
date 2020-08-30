@@ -1,8 +1,29 @@
 import React from 'react';
-import styles from './CalendarDate.module.css';
-import { getDate, getMonth } from 'date-fns';
+import styles from './CalendarDate.module.scss';
+import { format, isSameDay, isSameMonth } from 'date-fns';
 import classNames from 'classnames';
+import propTypes from 'prop-types';
 
+const CalendarDate = ({ dayDate, date, currentDate }) => {
+  const isCurrent =
+    isSameDay(dayDate, dayDate) && isSameMonth(dayDate, dayDate);
+  const className = classNames(styles.box, {
+    [styles.currentDate]: isCurrent,
+    [styles.otherMonth]: !isSameMonth(dayDate, date),
+  });
+  return <li className={className}>{format(dayDate, 'd')}</li>;
+};
+CalendarDate.propTypes = {
+  dayDate: propTypes.instanceOf(Date).isRequired,
+  date: propTypes.instanceOf(Date).isRequired,
+  currentDate: propTypes.instanceOf(Date),
+};
+CalendarDate.defaultTypes = {
+  currentDate: new Date(),
+};
+export default CalendarDate;
+
+/*
 function Date(props) {
   const { date, currentDate } = props;
   const today = getDate(currentDate);
@@ -15,3 +36,4 @@ function Date(props) {
   return <li className={className}>{getDate(date)}</li>;
 }
 export default Date;
+*/
