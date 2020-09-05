@@ -6,14 +6,12 @@ import Timer from './components/Timer/index';
 import Greeting from './components/Greeting';
 import FormLogin from './components/FormLogin';
 import Calendar from './components/Calendar';
+import Carousel from './components/Carousel';
+import { slidesCollection } from './components/Carousel/Config';
 
-const dbData = [];
+//const dbData = [];
 const App = () => {
-  return (
-    <>
-      <Calendar />
-    </>
-  );
+  return <Carousel width={800} height={400} slides={slidesCollection} />;
 };
 export default App;
 
