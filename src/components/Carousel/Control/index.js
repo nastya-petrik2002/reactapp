@@ -32,10 +32,10 @@ class Control extends Component {
     });
   };
   fullscreenMode = () => {
-    const { isfullscreen } = this.state;
+    const { isFullScreen } = this.state;
     const { fullscreenMode } = this.props;
     this.setState({
-      isfullscreen: isFullScreen,
+      isFullScreen: !isFullScreen,
     });
     fullscreenMode(isFullScreen);
   };

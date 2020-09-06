@@ -13,7 +13,12 @@ class Slide extends Component {
     };
   }
   handleLoad = () => {
+    /*
     this.ListeningStateChangeEvent({
+      isLoaded: true,
+    });
+    */
+    this.setState({
       isLoaded: true,
     });
   };
@@ -38,7 +43,7 @@ class Slide extends Component {
   }
   render() {
     const { img, isLoaded } = this.state;
-    const { currentSlide } = this.props;
+    const { currentSlide, contRatio } = this.props;
     const imageRatio = img.width / img.height;
     const imageSize = {
       [imageRatio > contRatio ? 'width' : 'height']: 'inherit',
@@ -46,7 +51,7 @@ class Slide extends Component {
     return (
       <>
         {isLoaded && (
-          <figure className={styles.container} title={currentStyle.title}>
+          <figure className={styles.container} title={currentSlide.title}>
             <img
               src={currentSlide.src}
               alt={currentSlide.title}
@@ -64,7 +69,7 @@ class Slide extends Component {
 }
 Slide.propTypes = {
   contRatio: propTypes.number.isRequired,
-  currentSlide: propTypes.share({
+  currentSlide: propTypes.shape({
     src: propTypes.string,
     title: propTypes.string,
     description: propTypes.string,

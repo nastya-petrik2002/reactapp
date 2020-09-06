@@ -29,10 +29,10 @@ class Carousel extends Component {
     });
   };
   resize = () => {
-      this.setState({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
+    this.setState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
   };
   fullscreenMode = (isFullscreen) => {
     const { width, height } = this.props;
@@ -43,23 +43,30 @@ class Carousel extends Component {
       });
       window.removeEventListener('resize', this.resize);
     } else {
-        this.resize();
-        window.body.style.overflow = isfullscreen ? 'initial' : 'hidden';
+      this.resize();
+      window.body.style.overflow = isFullscreen ? 'initial' : 'hidden';
+    }
   };
   render() {
-      const { currentIndex, width, height } = this.state;
-      const { slides } = this.props;
-      const contRatio = width / height;
-      const contSize = {
-          width,
-          height,
-      }; 
-      return(
-          <div className={styles.container} style={contSize}>
-              <Slide contRatio={contRatio} currentSlide={slides[currentIndex]} />
-              <Control next={this.nextIndex} prev={this.prevIndex} fullscreenMode={this.fullscreenMode} width={width} height={height} />
-          </div>
-      );
+    const { currentIndex, width, height } = this.state;
+    const { slides } = this.props;
+    const contRatio = width / height;
+    const contSize = {
+      width,
+      height,
+    };
+    return (
+      <div className={styles.container} style={contSize}>
+        <Slide contRatio={contRatio} currentSlide={slides[currentIndex]} />
+        <Control
+          next={this.nextIndex}
+          prev={this.prevIndex}
+          fullscreenMode={this.fullscreenMode}
+          width={width}
+          height={height}
+        />
+      </div>
+    );
   }
 }
 export default Carousel;

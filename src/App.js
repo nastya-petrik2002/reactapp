@@ -3,15 +3,25 @@ import React, { Component } from 'react';
 import UserList from './components/UserList';
 import SelectedUsers from './components/SelectedUsers/index';
 import Timer from './components/Timer/index';
+import FuncTimer from './components/FuncTimer';
 import Greeting from './components/Greeting';
 import FormLogin from './components/FormLogin';
 import Calendar from './components/Calendar';
 import Carousel from './components/Carousel';
 import { slidesCollection } from './components/Carousel/Config';
-
+import UserLoader from './components/UserList';
+import Counter from './components/Counter';
+import Chat from './components/Chat';
+import { useState } from 'react';
+import Pagination from './components/UserCard/Pagination';
 //const dbData = [];
+//return <Carousel width={800} height={400} slides={slidesCollection} />;
+
 const App = () => {
-  return <Carousel width={800} height={400} slides={slidesCollection} />;
+  const [currentPage, setCurrentPage] = useState(1);
+  return (
+    <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+  );
 };
 export default App;
 
