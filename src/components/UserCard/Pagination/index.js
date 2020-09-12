@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import styles from './Pagination.module.scss';
 import propTypes from 'prop-types';
 import api from './../api';
@@ -20,3 +20,4 @@ class Pagination extends Component {
 
 Pagination.propTypes = {};
 export default Pagination;
+*/

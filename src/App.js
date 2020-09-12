@@ -12,15 +12,17 @@ import { slidesCollection } from './components/Carousel/Config';
 import UserLoader from './components/UserList';
 import Counter from './components/Counter';
 import Chat from './components/Chat';
+import Card from './components/Card/js';
 import { useState } from 'react';
 import Pagination from './components/UserCard/Pagination';
 //const dbData = [];
 //return <Carousel width={800} height={400} slides={slidesCollection} />;
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  //const [currentPage, setCurrentPage] = useState(1);
   return (
-    <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+    <Card />
+    //<Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
   );
 };
 export default App;

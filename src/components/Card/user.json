@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "username1",
+    "surname": "usersurname1",
+    "imageSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Flenta.ru%2Fnews%2F2020%2F07%2F14%2Fgandalf%2F&psig=AOvVaw3VqwyB9nLK0kLD60MbJOP9&ust=1599983348770000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDd_cyQ4-sCFQAAAAAdAAAAABAD"
+  },
+  {
+    "id": 2,
+    "name": "username2",
+    "surname": "usersurname2",
+    "imageSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Flenta.ru%2Fnews%2F2020%2F07%2F14%2Fgandalf%2F&psig=AOvVaw3VqwyB9nLK0kLD60MbJOP9&ust=1599983348770000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDd_cyQ4-sCFQAAAAAdAAAAABAD"
+  },
+  {
+    "id": 3,
+    "name": "username3",
+    "surname": "usersurname3",
+    "imageSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Flenta.ru%2Fnews%2F2020%2F07%2F14%2Fgandalf%2F&psig=AOvVaw3VqwyB9nLK0kLD60MbJOP9&ust=1599983348770000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDd_cyQ4-sCFQAAAAAdAAAAABAD"
+  },
+  {
+    "id": 4,
+    "name": "username4",
+    "surname": "usersurname4",
+    "imageSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Flenta.ru%2Fnews%2F2020%2F07%2F14%2Fgandalf%2F&psig=AOvVaw3VqwyB9nLK0kLD60MbJOP9&ust=1599983348770000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDd_cyQ4-sCFQAAAAAdAAAAABAD"
+  },
+  {
+    "id": 5,
+    "name": "username5",
+    "surname": "usersurname5",
+    "imageSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Flenta.ru%2Fnews%2F2020%2F07%2F14%2Fgandalf%2F&psig=AOvVaw3VqwyB9nLK0kLD60MbJOP9&ust=1599983348770000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDd_cyQ4-sCFQAAAAAdAAAAABAD"
+  }
+]
